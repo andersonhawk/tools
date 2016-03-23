@@ -1,0 +1,18 @@
+--- useful command notes ---
+
+# access recently directory, 'cd -'
+
+# ssh tempory exit to host and login again, '~ control-z' + 'jobs fg x%'
+
+# useful grep commands
+	grep [pattern] [file_dir]
+	grep -v [pattern] [file_dir]	!pattern
+	grep -i [pattern] [file_dir]	ignorecase
+	grep -ri [pattern] [file_dir]	ignorecase recurse
+
+# useful find commands
+	find [dir] -name "*pattern*"
+	find [dir] -type f -size +100k	# file of size > 100k
+	# use find results to exec 'cmd'
+	find [dir] -type f -size +100k -exec ls -l {} \;
+	find [dir] -type f -mtime +60 | xargs tar -cvf /tmp/dataxx
