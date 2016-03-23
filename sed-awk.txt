@@ -1,0 +1,44 @@
+-------------
+# sed usage #
+-------------
+
+# set language
+# sed [opt] {sed-commands} {input-file}
+
+	$ sed -n 'p' /etc/passwd
+
+# sed load 'sed-cmds script' with input-file
+# sed [opt] -f {sed-commands-in-a-file} {input-file}
+	# edit script.sed with following two lines
+	/^root/ p
+	/^thomas/ p
+
+	$ sed -n -f script.sed /etc/passwd
+
+# sed [opt] -e 'sed-cmd' -e 'sed-cmd' {input-file}
+	$ sed -n -e '/^root/ p' -e '/^thomas/ p' /etc/passwd
+
+# sed command 'p' to print input line, '-n' disable default output
+# sed location line to print
+	$ sed '2 p' /etc/passwd
+	$ sed '2,4 p' /etc/passwd
+	$ sed '2,$ p' /etc/passwd
+	$ sed '1~2 p' /etc/passwd	# just print odd line
+
+# sed match and print
+	$ sed -n '/^root/ p' /etc/passwd
+	$ sed -n '/^hplip/,/^thomas/ p' /etc/passwd
+	$ sed -n '/^hplip/,+2 p' /etc/passwd
+
+# sed delete lines
+	$ sed '1,30 d' /etc/passwd
+	$ sed '/^thomas/ d' /etc/passwd
+	$ sed '/^hplip/,+2 d' /etc/passwd
+	$ sed '/^$/ d' /etc/passwd	# delete empty line
+	$ sed '/^#/' /etc/passwd	# delete comment line
+
+
+# sed write pattern to file
+	$ sed -n 'w output.txt' /etc/passwd
+	$ sed -n '2 w output.txt' /etc/passwd	# just save second line
+	$ sed -n '/^hplip/,+2 w output.txt' /etc/passwd
