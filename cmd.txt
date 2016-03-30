@@ -1,5 +1,7 @@
 --- useful command notes ---
 
+# ps dump process with children, 'ps -faux |grep nginx'
+
 # access recently directory, 'cd -'
 
 # ssh tempory exit to host and login again, '~ control-z' + 'jobs fg x%'
