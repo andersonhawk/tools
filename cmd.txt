@@ -1,6 +1,7 @@
 --- useful command notes ---
 
 # ps dump process with children, 'ps -faux |grep nginx'
+# ps dump user's process, 'ps -U thomas'
 
 # access recently directory, 'cd -'
 
@@ -11,6 +12,7 @@
 	grep -v [pattern] [file_dir]	!pattern
 	grep -i [pattern] [file_dir]	ignorecase
 	grep -ri [pattern] [file_dir]	ignorecase recurse
+	grep -e [pattern] --color
 
 # useful find commands
 	find [dir] -name "*pattern*"
@@ -18,3 +20,6 @@
 	# use find results to exec 'cmd'
 	find [dir] -type f -size +100k -exec ls -l {} \;
 	find [dir] -type f -mtime +60 | xargs tar -cvf /tmp/dataxx
+
+# 'df -h' dump partition info
+# 'df -Tha' dump mount file system type info
