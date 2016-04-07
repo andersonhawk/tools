@@ -1,4 +1,66 @@
 ## GCC part
 
+# build with debug info
+# modify makefile about CFLAGS:
+# 	CFLAGS = "-Wall -O2 -g"
+#	./configure CFLAGS="-Wall -O2 -g"
+
+	$ gcc -Wall -O2 -g src.c
+
 
 ## GDB part
+
+# linux gdb init file: ${HOME}/.gdbinit
+
+# set break point
+(gdb) b *0x08116fd6
+(gdb) b src.c:516
+(gdb) info break
+(gdb) delete <break_num>
+(gdb) disable <break_num>
+(gdb) enable <break_num>
+(gdb) clear <break_num>
+
+# set break point with condition
+(gdb) b isseq_compile if node == 0
+
+# loop times
+(gdb) continue [num]
+(gdb) step [num]
+(gdb) next [num]
+
+(gdb) finish
+(gdb) until <addr>
+
+# stack
+(gdb) backtrace
+(gdb) bt [N]
+(gdb) frame [N]
+
+# display variable
+(gdb) p argv
+(gdb) p *argv
+(gdb) info reg
+(gdb) p $eax
+
+# display format (printf)
+(gdb) p/x /d /u /t /a /c $eax
+
+# disassemble
+(gdb) x/10i $pc
+(gdb) disassemble $pc $pc+50
+
+# watch where variable be changed
+(gdb) watch <express>
+
+# change value in memory
+(gdb) set variable <variable>=<express>
+
+# generate core file
+(gdb) generate-core-file
+
+# attach process
+(gdb) attach <pid>
+
+# display process info
+(gdb) info proc
