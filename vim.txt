@@ -1,0 +1,27 @@
+=== vi improve ===
+
+     K
+     |
+H <- | -> L
+     |
+     J
+
+Vim mode:
+Normal
+Insert
+Visual
+Replace
+Command-line
+
+## vim installation ##
+	$ .configure --with-features=huge
+
+d2w: delete two words
+u: undo
+ctrl-R: redo
+
+# edit apache configuration #
+: syntax enable
+: set syntax=apache
+
+$$ 05 editing files $$
