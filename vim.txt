@@ -1,10 +1,32 @@
 === vi improve ===
 
+## vim configuration file ##
+~/.vimrc	most setting
+~/.gvimrc	graphic-only settings (font, window size)
+~/.vim/		plugins, language-specific options, color schemes
+
+## vim useful plugin ##
+NERDTree	File system tree
+Project		User-configured tree
+LustyExplorer	Quick folder navigation
+FuzzyFinder	Flexible search
+PeepOpen	Mac OSX GUI, Git metadata
+
+## arrow direction ##
      K
      |
 H <- | -> L
      |
      J
+
+## split windows ##
+ctrl-w s	split window
+ctrl-w v	vertical split window
+ctrl-w c	close window
+ctrl-w o	just left one window
+ctrl-w w	clockwise pick next window
+ctrl-w h/l/k/j	choose next window
+
 
 Vim mode:
 Normal
@@ -24,4 +46,11 @@ ctrl-R: redo
 : syntax enable
 : set syntax=apache
 
-$$ 05 editing files $$
+# search pattern
+: set hlsearch
+: set incsearch
+
+:%s/search/replace/gc
+	% search the current buffer
+	g search for all occurrences
+	c ask for confirmation on each match
