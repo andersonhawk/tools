@@ -50,7 +50,19 @@ ctrl-R: redo
 : set hlsearch
 : set incsearch
 
+# search options
+:[range]s[ubstitude]/{pattern}/{string}/[flags] [count]
+
 :%s/search/replace/gc
 	% search the current buffer
 	g search for all occurrences
 	c ask for confirmation on each match
+
+# print the reg pattern
+:g/{pattern}/p
+# display pattern line number
+:g/{pattern}/#
+# delete all of blank line
+:g/^$/d
+# yank the pattern line
+:g/{pattern}/+y
