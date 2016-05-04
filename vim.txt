@@ -28,12 +28,38 @@ ctrl-w w	clockwise pick next window
 ctrl-w h/l/k/j	choose next window
 
 
-Vim mode:
+## Vim mode ##
 Normal
 Insert
 Visual
 Replace
 Command-line
+
+## vim map scope: map/unmap ##
+nmap: normal mode
+imap: insert mode
+vmap: visual mode
+map: normal, visual, and operating-pending modes.
+map!: command and insert modes
+
+## vim spacing out ##
+# The number of spaces inserted when reindent operators or
+# automatic indentation are used.
+	shiftwidth=2
+
+# The number of spaces inserted with TAB is hit.
+	shifttabstop=2
+
+# replace all tabs with spaces in the current buffer.
+	retab
+
+## vim foldmethod ##
+	set foldmethod=syntax
+# shortcut key #
+		zk (move up)
+zm  zc		fold		za	zo 	zR
+all close			toggle 	open	all
+		zj (move down)
 
 ## vim installation ##
 	$ .configure --with-features=huge
@@ -58,7 +84,7 @@ ctrl-R: redo
 	g search for all occurrences
 	c ask for confirmation on each match
 
-# print the reg pattern
+# print the reg pattern #
 :g/{pattern}/p
 # display pattern line number
 :g/{pattern}/#
@@ -66,3 +92,6 @@ ctrl-R: redo
 :g/^$/d
 # yank the pattern line
 :g/{pattern}/+y
+
+# execute linux command in vim #
+	:!wget www.bing.com
