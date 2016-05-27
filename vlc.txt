@@ -1,0 +1,27 @@
+## VLC shortcuts ##
+
+# Time Shifting #
+	ALT+ Right Arrow		-- short skip forward (10 seconds default)
+	ALT+ Left Arrow			-- short skip backward
+	Ctrl + Right Arrow		-- medium skip forward (1 minute default)
+	Ctrl + Left Arrow			-- medium skip backword
+	Ctrl + ALT + ->				-- long skip forward (5 minutes default)
+	Ctrl + ALT + <-				-- long skip backword
+
+	Ctrl + Down Arrow		-- down volume
+	Ctrl + Up Arrow			-- up volume
+	m										-- mute
+
+	v										-- switch subtitle
+	b										-- audio select
+	t										-- show time
+	space								-- pause
+
+	n										-- play next in queue
+	p										-- play previous in queue
+
+	f										-- full screen
+	c										-- change scree
+	a										-- change aspect ratio
+	Ctrl + h							-- hide the control panel
+	Ctrl + w							-- exit vlc
