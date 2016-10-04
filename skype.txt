@@ -1,0 +1,10 @@
+## debian skype setup ##
+	https://wiki.debian.org/skype#Debian_8_.22Jessie.22
+
+
+## backup skype data ##
+	tar directory: /home/<user>/.Skype/<skype_name>
+
+## restore skype data ##
+	unpack the <skype_name> into /home/<user>/.Skype/
+	login skype again, and check history chat information
