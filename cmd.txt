@@ -26,3 +26,9 @@
 
 # date get time wit specific format
 	date +%Y%m%d%H%M%S
+
+# expr math op
+	expr 3 \* 3
+	expr 3 / 3
+	echo '3 * 3' | xargs expr
+	echo '3 / 3' | xargs expr
