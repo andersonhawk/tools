@@ -1,0 +1,14 @@
+### grub bootloader options ###
+
+## main configuration: /boot/grub2/grub.cfg ##
+## config:
+##	/etc/default/grub ##
+##	/etc/grub2.cfg && /etc/grub.d ##
+## generate new configuration: ##
+$ grub-mkconfig --output=/boot/grub2/grub.cfg
+
+## modify default boot menuentry: /etc/default/grub ##
+GRUB_DEFAULT=
+	0, 1, 2, (submenu: 2>0)
+	saved
+	'boot menu entry'
