@@ -6,6 +6,6 @@ http://easwy.com/blog/archives/vim-cscope-ctags/
 
 # cscope support c++ language #
 # generate c++ files list #
-$ find . -name "*.h" -o -name "*.cpp" -o > cscope.files
+$ find . -name "*.h" -o -name "*.cpp" > cscope.files
 $ cscope -bkq -i cscope.files
 $ cscope -d
