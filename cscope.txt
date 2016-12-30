@@ -2,7 +2,7 @@
 
 ## help links ##
 http://easwy.com/blog/archives/vim-cscope-ctags/
-
+http://www.vim.org/scripts/script_search_results.php?keywords=cscope&script_type=&order_by=rating&direction=descending&search=search
 
 # cscope support c++ language #
 # generate c++ files list #
