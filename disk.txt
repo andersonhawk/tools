@@ -1,0 +1,2 @@
+## partition table modify and save ##
+	# gdisk can modify and choose gpt/msdos from hard disk #
